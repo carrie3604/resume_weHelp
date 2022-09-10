@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  min-height: 120vh;
+  background-color: #faebd7;
+  header {
+    h1 {
+      margin: 2rem;
+      text-align: center;
+    }
+    hr {
+      width: 80vw;
+      margin: 0 auto;
+    }
+  }
+
+  //**** main****//
+  main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    section.top {
+      margin: 2rem 2rem 0 -1rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    section.introduction {
+      flex: 6 1 400px;
+      margin-left: 8rem;
+      P {
+        line-height: 1.75rem;
+        margin-top: 1rem;
+      }
+    }
+    section.selfpic {
+      flex: 1 1 200px;
+      margin-left: 2rem;
+
+      img {
+        border-radius: 1rem;
+        border: 0.1rem solid grey;
+      }
+    }
+
+    section.bottom {
+      width: 80vw;
+      margin-bottom: 2rem;
+      position: relative;
+      div.questions {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: 120vh;
+
+        div.question {
+          ul li {
+            font-size: 1.15rem;
+            color: #80632d;
+          }
+          p {
+            line-height: 1.75rem;
+          }
+          ol {
+            margin-top: 0.5rem;
+            li {
+              line-height: 2rem;
+
+              span {
+                font-weight: 700;
+              }
+              a {
+                color: rgb(101, 92, 92);
+                font-size: smaller;
+              }
+
+              p {
+                color: black;
+                font-size: smaller;
+              }
+            }
+          }
+          ul {
+            margin: 1rem 0;
+          }
+        }
+      }
+      div.circle {
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        background-color: hsl(33, 52%, 76%);
+        opacity: 0.3;
+        position: absolute;
+        right: -20vw;
+        top: 40vw;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    section.top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      section.introduction {
+        flex: 1 1 200px;
+        margin-left: -1rem;
+      }
+      section.selfpic {
+        flex: 1 1 100px;
+        margin: 1.5rem 0;
+      }
+    }
+  }
+}
